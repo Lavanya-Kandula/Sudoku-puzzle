@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="icon" href="icon.png" type="image/x-icon" sizes="16x16">
+    <link rel="apple-touch-icon" href="icon.png" type="image/x-icon" sizes="180x180">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="rules.html"><button onclick="showPage('rules')">Rules & How to Play</button></a>
+        <h1>🧩Sudoku Game</h1>
+        <button onclick="toggleDarkMode()">🌙</button>
+    </nav>
+
+    <div class="container">
+        <div class="controls">
+            <label for="timer">⏱️Time Elapsed:</label>
+            <span id="timer">00:00</span>
+            <label for="score">⭐Score:</label>
+            <span id="score">0</span>
+            <label for="best-score">🎯Best Score:</label>
+            <span id="best-score">0</span>
+        </div>
+
+        <div id="game-board"></div>
+        <div class="controls">
+            <label for="movesCount">🎮Moves:</label>
+            <span id="movesCount">0</span>
+            <label for="errorsCount">❌Errors:</label>
+            <span id="errorsCount">0</span>
+            <label for="hints">💡Hints</label>
+        </div>
+
+        <button onclick="undoMove()">↩️ Undo</button>
+        <button onclick="redoMove()">↪️ Redo</button>
+        <br>
+        <button onclick="generateSudoku()">🎲New Puzzle</button>
+        <button onclick="solveSudoku()">✅Submit</button>
+    </div>
+    
+    <div id="popup">
+        <div id="popup-message"></div>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
